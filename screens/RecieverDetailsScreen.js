@@ -52,6 +52,18 @@ updateItemStatus=()=>{
   })
 }
 
+addNotification=()=>{
+  var message = this.state.userName + "has shown interest in donating book"
+  db.collection("all_notifications").add({
+    "targeted_user_id": this.state.recieverId,
+    "donor_id":this.state.userId,
+    "request_id":this.state.request_id,
+    "book_name":this.state.bookName,
+    "date":firebase.firestore.FieldValue.serverTimestamp(),
+    "notification_status":"unread",
+    "message":message
+  })
+}
 
 
 componentDidMount(){
@@ -107,6 +119,7 @@ componentDidMount(){
                   onPress={()=>{
                     this.updateItemStatus()
                     this.props.navigation.navigate('MyDonations')
+                    this.addNotification()
                   }}>
                 <Text>I want to Donate</Text>
               </TouchableOpacity>
