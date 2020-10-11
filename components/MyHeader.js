@@ -14,7 +14,7 @@ value : "",
  BellIconWithBadge =()=>{
   return(
     <View>
-      <Icon 
+      <Icon
       name= "bell"
       type= "font-awesome"
       color='#696969'
