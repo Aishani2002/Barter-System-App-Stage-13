@@ -110,48 +110,58 @@ render() {
 }
 
 const styles = StyleSheet.create({
-container: {
-flex:1,
-alignItems: 'center',
-justifyContent: 'center',
-},
-
-formContainer:{
-flex:1,
-wdith:"100%",
-alignItems: 'center',
-},
-
-formTextInput:{
-width:"75%",
-height:35,
-alignSelf:"center",
-borderColour:"ffab91",
-borderRadius:10,
-borderWidth:1,
-marginTop:20,
-padding:10
-},
-
-button:{
-width:"75%",
-height:50,
-justifyContent:"center",
-alignItems: 'center',
-borderRadius:10,
-backgroundColor:"ff5722",
-shadowColor:"#000000",
-shadowOffset:{width:0, height:8},
-shadowOpacity:0.44,
-shadowRadius:10.32,
-elevation:16,
-marginTop:10,
-},
-
-buttonText:{
-fontSize:25,
-fontWeight:"bold",
-color:"#ffffff",
-}
-})
-
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor:"#6fc0b8"
+      },
+      formContainer:{
+        flex: 0.88,
+        justifyContent:'center'
+      },
+      label:{
+        fontSize:RFValue(18),
+        color:"#717D7E",
+        fontWeight:'bold',
+        padding:RFValue(10),
+        marginLeft:RFValue(20)
+      },
+      formTextInput: {
+        width: "90%",
+        height: RFValue(50),
+        padding: RFValue(10),
+        borderWidth:1,
+        borderRadius:2,
+        borderColor:"grey",
+        marginBottom:RFValue(20),
+        marginLeft:RFValue(20)
+      },
+      button: {
+        width: "75%",
+        height: RFValue(60),
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: RFValue(50),
+        backgroundColor: "#32867d",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 8,
+        },
+        shadowOpacity: 0.44,
+        shadowRadius: 10.32,
+        elevation: 16,
+        marginTop: RFValue(20),
+      },
+      buttonView:{
+        flex: 0.22,
+        alignItems: "center",
+        marginTop:RFValue(100)
+    },
+      buttonText: {
+        fontSize: RFValue(23),
+        fontWeight: "bold",
+        color: "#fff",
+      },
+    });
